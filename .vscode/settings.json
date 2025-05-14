@@ -1,0 +1,9 @@
+{
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+    "editor.formatOnSave": true
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "intelephense.environment.phpVersion": "8.2.5"
+}

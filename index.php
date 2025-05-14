@@ -13,6 +13,16 @@
     <?php
     $username = "admin";
     $password = "123";
+
+    function infoPost($arrayData)
+    {
+        $info = "<strong>Data</strong><br>";
+        foreach ($arrayData as $key => $value) {
+            $info .= $key . ":" . $value . "<br>";
+        }
+        return $info;
+    }
+
     ?>
 
     <!-- form login -->
@@ -31,6 +41,12 @@
                 <!-- kode php -->
                 <?php
                 if ($_SERVER['REQUEST_METHOD'] == "POST") {
+                    echo '<pre>';
+                    var_dump($_POST);
+                    echo '</pre>';
+
+                    echo infoPost($_POST);
+
                     if ($_POST['user'] == $username && $_POST['pass'] == $password) {
                         alertLogin("berhasil");
                     } else {
